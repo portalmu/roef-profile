@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0a1128; /* Navy Dark Base */
+}
+
+/* Animasi Floating Logo */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+.animate-float { animation: float 5s ease-in-out infinite; }
+
+/* Glowing Text Effect */
+.glow-text {
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    color: #f4ebd0; /* Creamy White */
+}
+
+/* Glass Card Styling */
+.glass-card {
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+.glass-card:hover {
+    border-color: #d4af37;
+    transform: translateX(10px);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+/* Carousel Image Styling */
+.gallery-slide-img {
+    width: 100%;
+    aspect-ratio: 4/5; /* Menyesuaikan ukuran vertikal gambar kegiatanmu */
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: 0.5s;
+}
+
+.swiper-slide-active .gallery-slide-img {
+    border-color: #d4af37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+/* Custom Swiper Pagination Color */
+.swiper-pagination-bullet-active {
+    background: #d4af37 !important;
+}
+
+/* Scrollbar Custom */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a1128; }
+::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+
+/* Hierarchy Styling */
+.hierarchy-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 2px solid;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    min-width: 250px;
+}
+
+.hierarchy-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+/* Discord Widget Styling */
+iframe {
+    transition: all 0.3s ease;
+    filter: grayscale(0.2);
+}
+
+iframe:hover {
+    filter: grayscale(0);
+    border-color: #d4af37;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+}
+/* Back to Top Styling */
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.1s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-dasharray: 163.36; /* Keliling lingkaran 2 * PI * r (26) */
+    stroke-dashoffset: 163.36;
+}
+
+#backToTop.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+#backToTop .absolute {
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+}
+/* Custom Cursor Styling */
+.cursor-dot, .cursor-outline {
+    pointer-events: none;
+    position: fixed;
+    top: 0; left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+.cursor-dot { width: 8px; height: 8px; background-color: #d4af37; }
+.cursor-outline { width: 40px; height: 40px; border: 2px solid rgba(212, 175, 55, 0.5); transition: all 0.1s ease-out; }
+
+/* Rank Card Premium */
+.rank-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+    padding: 3rem 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.rank-card:hover {
+    transform: translateY(-15px);
+    border-color: #d4af37;
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+}
+.rank-title { font-size: 10px; text-transform: uppercase; font-weight: 900; letter-spacing: 4px; margin-bottom: 0.5rem; }
+.rank-name { font-size: 1.5rem; font-weight: 900; italic: true; }
+
+/* Staff Box Styles */
+.staff-box {
+    background: rgba(255,255,255,0.02);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border-bottom: 2px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+.staff-box:hover { background: rgba(212, 175, 55, 0.05); border-bottom-color: #d4af37; }
+.staff-box span { font-size: 9px; color: #d4af37; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; }
+
+/* Navigation CTA */
+.discord-cta {
+    background: linear-gradient(to right, #d4af37, #b8860b);
+    color: #050811;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.discord-cta:hover { transform: skewX(-10deg); filter: brightness(1.2); }
+
+/* Gallery V2 */
+.gallery-card-v2 {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+}
+.gallery-card-v2 img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+.gallery-card-v2 span {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 2rem 1rem 1rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    font-size: 12px; font-weight: 800; text-transform: uppercase; text-align: center;
+}
+.gallery-card-v2:hover img { transform: scale(1.1) rotate(2deg); }
+
+/* Merch Section Styling */
+.merch-frame {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(145deg, rgba(212, 175, 55, 0.1), transparent);
+    border-radius: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.merch-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #d4af37;
+    color: #050811;
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.merch-btn:hover {
+    background: #fff;
+    transform: scale(1.02);
+}
+
+/* Premium Rule Cards */
+.rule-card-premium {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(212, 175, 55, 0.05);
+    padding: 2rem;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.rule-card-premium:hover {
+    background: rgba(212, 175, 55, 0.03);
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateX(10px);
+}
+
+.rule-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+:root {
+    --navy-base: #050811;
+}
+
+body.bg-navy-base {
+    background-color: var(--navy-base);
+}
+
+.glow-text {
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    transition: text-shadow 0.5s ease, color 0.5s ease;
+}
+
+/* Efek Unik untuk Masing-masing Lead */
+
+/* 1. Lead Event (Sey) - Efek Biru Elektrik & Getar */
+.card-event:hover {
+    border-color: #60a5fa !important;
+    box-shadow: 0 0 30px rgba(96, 165, 250, 0.4);
+    transform: translateY(-10px) rotate(2deg); /* Miring sedikit agar dinamis */
+}
+
+/* 2. Vice Lead (Portal) - Efek Emas Premium & Zoom */
+.card-vice:hover {
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+    transform: translateY(-15px) scale(1.1); /* Lebih besar untuk kesan otoritas */
+}
+
+/* 3. Lead Scout (Tiw) - Efek Hijau Neon & Bayangan Luas */
+.card-scout:hover {
+    border-color: #4ade80 !important;
+    box-shadow: 0 0 30px rgba(74, 222, 128, 0.4);
+    transform: translateY(-10px) skewX(-5deg); /* Efek miring untuk kesan cepat/scout */
+}
+
+/* Transisi Halus untuk Semua Rank Card */
+.rank-card {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Warna Khusus Portal */
+.card-portal:hover {
+    border-color: #8f00ff !important;
+    box-shadow: 0 0 20px rgba(143, 0, 255, 0.4), 
+                0 0 40px rgba(143, 0, 255, 0.2);
+    transform: translateY(-15px) scale(1.05);
+}
+
+/* Efek Partikel "Pancaran Energi" saat Hover */
+.rank-card {
+    position: relative;
+    overflow: hidden; /* Menjaga partikel tetap di area kartu atau hapus jika ingin meluber */
+}
+
+.rank-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--hover-color) 0%, transparent 70%);
+    transition: width 0.6s, height 0.6s, opacity 0.6s;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.card-event:hover { --hover-color: rgba(96, 165, 250, 0.3); }
+.card-portal:hover { --hover-color: rgba(143, 0, 255, 0.3); }
+.card-scout:hover { --hover-color: rgba(74, 222, 128, 0.3); }
+
+.rank-card:hover::before {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+.card-lead:hover {
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 50px rgba(212, 175, 55, 0.6), 
+                0 0 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(-20px) scale(1.1); /* Paling tinggi & besar */
+}
+
+/* Tambahkan warna hover untuk Lead Famz ke sistem partikel sebelumnya */
+.card-lead:hover { --hover-color: rgba(212, 175, 55, 0.4); }
+
+/* Pastikan transisi tetap mulus */
+.rank-card {
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stacked-photo {
+    position: absolute;
+    width: 320px;
+    padding: 15px 15px 40px 15px;
+    background: #fdfdfd; /* Warna kertas polaroid */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 4px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.stacked-photo img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    filter: sepia(0.3); /* Efek vintage */
+}
+
+.photo-caption {
+    display: block;
+    margin-top: 15px;
+    font-family: 'Permanent Marker', cursive; /* Gunakan font tulisan tangan */
+    color: #333;
+    font-size: 14px;
+}
+
+/* Variasi Rotasi Acak */
+.stacked-photo:nth-child(1) { transform: rotate(-5deg) translateX(-20px); }
+.stacked-photo:nth-child(2) { transform: rotate(3deg) translateY(-10px); }
+.stacked-photo:nth-child(3) { transform: rotate(-2deg) translateX(30px); }
+
+/* Efek Hover: Foto maju ke depan dan menjadi tegak */
+.stacked-photo:hover {
+    z-index: 50;
+    transform: rotate(0deg) scale(1.1) translateY(-20px);
+    box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+}
+
+/* Penyesuaian War Mode */
+body.war-mode .stacked-photo:hover {
+    box-shadow: 0 20px 50px rgba(255, 0, 0, 0.4);
+}
+

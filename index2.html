@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Royalty of Emperor Famz | Official Profile</title>
+    <meta name="description" content="Profil Resmi Komunitas Royalty of Emperor Famz. Loyalty, Bravery, Royalty.">
+    <meta property="og:image" content="logoroef.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-navy-base text-white selection:bg-yellow-500 selection:text-black transition-colors duration-700">
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="fixed w-full z-[100] bg-opacity-80 backdrop-blur-xl border-b border-yellow-500/10 transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <img src="logoroef.png" alt="RoEF Logo" class="h-10 w-10 rounded-full border border-yellow-500/50 hero-logo-nav">
+                <span class="font-black text-xl tracking-tighter uppercase italic">RoEF<span class="text-yellow-500"> CLAN</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-[11px] font-black tracking-[0.3em] uppercase items-center">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#galeri" class="nav-link">Galeri</a>
+                <a href="#merch" class="nav-link">Merch</a>
+                <a href="#peraturan" class="nav-link">Rules</a>
+                <a href="#struktur" class="nav-link">Hierarchy</a>
+                
+                <button id="themeToggle" class="ml-4 p-2 border border-yellow-500/30 rounded-full hover:bg-yellow-500 hover:text-black transition flex items-center gap-2">
+                    <i class="fas fa-moon text-sm"></i>
+                    <span class="text-[9px]">MODE</span>
+                </button>
+            </div>
+            <a href="https://discord.gg/mZS6zypgAA" class="discord-cta">JOIN DISCORD</a>
+        </div>
+    </nav>
+
+    <header id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#050811]/50 to-[#050811]"></div>
+        
+        <div class="relative z-10 text-center px-4" data-aos="zoom-out" data-aos-duration="2000">
+            <div class="relative inline-block mb-12">
+                <div class="absolute -inset-8 bg-yellow-500/20 blur-3xl rounded-full animate-pulse"></div>
+                <img src="logoroef.png" alt="Big Logo" class="relative mx-auto h-64 w-64 animate-float drop-shadow-[0_0_50px_rgba(212,175,55,0.4)]">
+            </div>
+            <h1 class="text-7xl md:text-9xl font-black italic tracking-tighter mb-4 glow-text uppercase leading-none">
+                ROYALTY OF <br><span class="text-yellow-500 drop-shadow-neon">EMPEROR</span>
+            </h1>
+            <div class="flex items-center justify-center gap-4 text-gray-400 tracking-[0.8em] uppercase text-xs mb-12">
+                <span>Loyalty</span> <span class="text-yellow-500">•</span> <span>Bravery</span> <span class="text-yellow-500">•</span> <span>Royalty</span>
+            </div>
+            
+            <div class="flex justify-center" data-aos="fade-up" data-aos-delay="500">
+                <div class="glass-card px-12 py-6 rounded-2xl border-yellow-500/20">
+                    <div class="text-5xl font-black text-white counter" data-target="34">0</div>
+                    <p class="text-[10px] text-yellow-500 font-bold tracking-[0.4em] uppercase mt-2">Active Imperial Members</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="galeri" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl font-black italic uppercase tracking-tighter">Imperial <span class="text-yellow-500">Archives</span></h2>
+                <div class="h-1 w-24 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="swiper galeriSwiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="3.png" loading="lazy" alt="Boxing"><span>Boxing Tourney</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="2.png" loading="lazy" alt="Fishing"><span>Fishing Day</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="5.png" loading="lazy" alt="Mountain"><span>Mountain Expedition</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="6.png" loading="lazy" alt="Collab"><span>Clan Collab</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="4.png" loading="lazy" alt="Horror"><span>Nightmare Sessions</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="1.png" loading="lazy" alt="Forest"><span>99 Nights Survival</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="9.png" loading="lazy" alt="Theme Park"><span>Joyride Event</span></div></div>
+                    <div class="swiper-slide"><div class="gallery-card-v2"><img src="8.png" loading="lazy" alt="Hot Spring"><span>Royal Spa</span></div></div>
+                </div>
+                <div class="swiper-pagination mt-10"></div>
+            </div>
+        </div>
+    </section>
+    <section id="merch" class="py-32 bg-[#080c18] border-y border-yellow-500/5 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1" data-aos="fade-right">
+                    <div class="relative group cursor-pointer">
+                        <div class="absolute -inset-4 bg-yellow-500/20 blur-3xl opacity-50 group-hover:opacity-100 transition duration-700"></div>
+                        <div class="merch-frame p-8 border border-yellow-500/20 rounded-3xl bg-gradient-to-br from-yellow-500/10 to-transparent">
+                            <img src="baju.webp" alt="Varsity" class="w-full rounded-2xl relative z-10 transform group-hover:scale-105 transition duration-500 shadow-2xl">
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 space-y-8" data-aos="fade-left">
+                    <div>
+                        <span class="text-yellow-500 font-black text-xs tracking-[0.4em] uppercase">Imperial Collection</span>
+                        <h2 class="text-5xl font-black italic uppercase leading-tight mt-2 italic">The <span class="text-yellow-500 underline decoration-4 underline-offset-8">Varsity</span> RoEF</h2>
+                    </div>
+                    <p class="text-gray-400 text-lg leading-relaxed italic italic">"Simbol kekuatan dan persaudaraan. Kenakan UGC resmi RoEF biar makin keren dan semua orang tau kamu bagian dari RoEF!"</p>
+                    <a href="https://www.roblox.com/id/catalog/129998869261693/Varsity-RoEF" target="_blank" class="merch-btn bg-yellow-500 text-black px-10 py-5 rounded-xl font-black flex justify-between items-center hover:bg-white transition shadow-[0_0_20px_rgba(234,179,8,0.3)]">
+                        <span>BUY ON ROBLOX CATALOG</span>
+                        <i class="fas fa-shopping-bag text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="peraturan" class="py-32 bg-[#050811]">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-down">
+                <h2 class="text-4xl font-black italic uppercase tracking-tighter">Imperial <span class="text-yellow-500">Laws</span></h2>
+                <p class="text-gray-500 text-xs tracking-widest uppercase mt-4 italic">Peraturan Clan Royalty of Emperor Famz</p>
+            </div>
+            
+            <div class="grid gap-6">
+                <div class="rule-card-premium p-8 bg-white/5 border border-yellow-500/10 rounded-2xl flex gap-6 group hover:bg-yellow-500/5 transition" data-aos="fade-right">
+                    <div class="text-yellow-500 text-3xl shrink-0"><i class="fas fa-user-shield"></i></div>
+                    <div>
+                        <h4 class="font-black text-yellow-500 uppercase italic mb-2 tracking-widest">Attitude 🗣️</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed italic">Hormati member lain jika ingin dihormati. Segala macam percakapan yang mengandung unsur SARA, ancaman, ucapan kasar yang agresif dan tidak beradab sangat tidak ditoleransi di server ini dan akan segera dihapus.</p>
+                    </div>
+                </div>
+
+                <div class="rule-card-premium p-8 bg-white/5 border border-yellow-500/10 rounded-2xl flex gap-6 group hover:bg-yellow-500/5 transition" data-aos="fade-right" data-aos-delay="100">
+                    <div class="text-yellow-500 text-3xl shrink-0"><i class="fas fa-ban"></i></div>
+                    <div>
+                        <h4 class="font-black text-yellow-500 uppercase italic mb-2 tracking-widest">No NSFW 🚫</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed italic">Segala macam postingan yang tergolong 'unsafe' seperti pornografi, konten gore yang menunjukkan organ dalam tubuh manusia/hewan tidak diijinkan di server ini.</p>
+                    </div>
+                </div>
+
+                <div class="rule-card-premium p-8 bg-white/5 border border-yellow-500/10 rounded-2xl flex gap-6 group hover:bg-yellow-500/5 transition" data-aos="fade-right" data-aos-delay="200">
+                    <div class="text-yellow-500 text-3xl shrink-0"><i class="fas fa-users-slash"></i></div>
+                    <div>
+                        <h4 class="font-black text-yellow-500 uppercase italic mb-2 tracking-widest">No Konflik & Drama 🎭</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed italic">Argumen, postingan dan komentar yang mengandung unsur konflik antar member harap diselesaikan secara pribadi melalui direct message (DM), dan tidak dibawa ke publik.</p>
+                    </div>
+                </div>
+
+                <div class="rule-card-premium p-8 bg-white/5 border border-yellow-500/10 rounded-2xl flex gap-6 group hover:bg-yellow-500/5 transition" data-aos="fade-right" data-aos-delay="300">
+                    <div class="text-yellow-500 text-3xl shrink-0"><i class="fas fa-skull"></i></div>
+                    <div>
+                        <h4 class="font-black text-yellow-500 uppercase italic mb-2 tracking-widest">Toxicity 💀</h4>
+                        <p class="text-gray-400 text-sm leading-relaxed italic">Omongan kasar (swearing) diperbolehkan, asalkan tidak agresif atau mengancam keselamatan personal member lain, dan tidak mengandung unsur SARA/Mental health.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center" data-aos="zoom-in">
+                <div class="inline-block bg-yellow-500/10 border border-yellow-500/20 px-8 py-4 rounded-xl">
+                    <p class="text-yellow-500 font-bold text-sm italic italic tracking-wider">Warn & Ban ⚠️ : Pelanggaran berat bisa berujung kepada ban tanpa warn terlebih dahulu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="struktur" class="py-32 bg-[#080c18] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24" data-aos="fade-down">
+                <h2 class="text-4xl font-black italic uppercase tracking-tighter">Imperial <span class="text-yellow-500">Hierarchy</span></h2>
+                <p class="text-gray-500 text-xs tracking-widest uppercase mt-2">The Pillars of Royalty</p>
+            </div>
+            
+            <div class="flex justify-center mb-20" data-aos="zoom-in">
+    <div class="rank-card gold-rank card-lead">
+        <i class="fas fa-crown text-yellow-500 mb-4 text-3xl"></i>
+        <p class="rank-title">Lead Famz</p>
+        <h3 class="rank-name">LACTALOS</h3>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+    <div class="rank-card silver-rank card-event" data-aos="fade-right" data-aos-delay="100">
+        <p class="rank-title text-blue-400">Lead Event</p>
+        <h3 class="rank-name">SEY</h3>
+    </div>
+
+    <div class="rank-card gold-rank-v2 card-portal" data-aos="fade-up" data-aos-delay="200">
+        <p class="rank-title" style="color: #8f00ff;">Vice Lead</p>
+        <h3 class="rank-name">PORTAL</h3>
+    </div>
+
+    <div class="rank-card silver-rank card-scout" data-aos="fade-left" data-aos-delay="300">
+        <p class="rank-title text-green-400">Lead Scout</p>
+        <h3 class="rank-name">TIW</h3>
+    </div>
+</div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+                <div class="staff-box"><span>Creator</span><p>May, Dal, Mochieza, Bengs</p></div>
+                <div class="staff-box"><span>Admin</span><p>Pioo, Cian</p></div>
+                <div class="staff-box"><span>Scout</span><p>Yuhao, Alam, Nai, Daniel</p></div>
+                <div class="staff-box"><span>Support</span><p>Ala, Aby</p></div>
+            </div>
+        </div>
+    </section>
+<section id="moments" class="py-32 bg-[#050811]">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black italic uppercase">Imperial <span class="text-yellow-500">Moments</span></h2>
+            <p class="text-gray-500 text-xs tracking-widest uppercase mt-2">Captured Memories of the Empire</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+            <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl border border-yellow-500/20 group">
+                <img src="black.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-yellow-500/20 group">
+                <img src="brown.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+            <div class="overflow-hidden rounded-2xl border border-yellow-500/20 group">
+                <img src="troll.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+            <div class="md:col-span-2 overflow-hidden rounded-2xl border border-yellow-500/20 group">
+                <img src="treetop.png" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="py-20 text-center bg-[#050811] border-t border-yellow-500/5">
+        <img src="logoroef.png" alt="Logo" class="h-20 mx-auto mb-8 opacity-20 grayscale hover:grayscale-0 hover:opacity-100 transition duration-700">
+        <p class="text-[10px] text-gray-600 tracking-[0.5em] uppercase italic">© 2026 Royalty of Emperor Famz. Coded by WS.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+    AOS.init({ duration: 1000, once: true });
+
+    // 1. CUSTOM CURSOR
+    const dot = document.querySelector('.cursor-dot');
+    const outline = document.querySelector('.cursor-outline');
+    window.addEventListener('mousemove', (e) => {
+        dot.style.left = outline.style.left = `${e.clientX}px`;
+        dot.style.top = outline.style.top = `${e.clientY}px`;
+    });
+
+    // 2. COUNTER ANIMATION
+    const observer = new IntersectionObserver((entries) => {
+        if(entries[0].isIntersecting) {
+            document.querySelectorAll('.counter').forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                gsap.to(counter, {
+                    innerText: target,
+                    duration: 2,
+                    snap: { innerText: 1 },
+                    ease: "power2.out"
+                });
+            });
+        }
+    }, { threshold: 0.5 });
+    observer.observe(document.querySelector('#home'));
+
+    // 3. FUNGSI PARTIKEL (DENGAN GARIS SEPERTI DI GAMBAR)
+    function initParticles(color) {
+    particlesJS("particles-js", {
+        "particles": {
+            "number": { "value": 100, "density": { "enable": true, "value_area": 800 } },
+            "color": { "value": color },
+            "shape": { "type": "circle" },
+            "opacity": { "value": 0.5, "random": false },
+            "size": { "value": 3, "random": true },
+            "line_linked": { 
+                "enable": true, 
+                "distance": 150, 
+                "color": color, 
+                "opacity": 0.4, 
+                "width": 1 
+            },
+            "move": { 
+                "enable": true, 
+                "speed": 3,          // Kecepatan gerak
+                "direction": "top",  // MEMBUAT GERAK KE ATAS
+                "random": false, 
+                "straight": false,    // Set 'true' jika ingin lurus tanpa goyangan
+                "out_mode": "out", 
+                "bounce": false 
+            }
+        },
+        "interactivity": {
+            "events": {
+                "onhover": { "enable": true, "mode": "grab" },
+                "onclick": { "enable": true, "mode": "push" }
+            },
+            "modes": {
+                "grab": { "distance": 140, "line_linked": { "opacity": 1 } }
+            }
+        },
+        "retina_detect": true
+    });
+}
+
+    // Inisialisasi awal dengan warna Emas
+    initParticles("#d4af37");
+    // Efek guncangan layar saat War Mode aktif
+gsap.to("body", { 
+    duration: 0.1, 
+    x: 5, 
+    repeat: 5, 
+    yoyo: true, 
+    ease: "sine.inOut", 
+    onComplete: () => gsap.set("body", { x: 0 }) 
+});
+
+// Flash warna merah sekilas pada layar
+const flash = document.createElement('div');
+flash.setAttribute('style', 'position:fixed; top:0; left:0; width:100%; height:100%; background:red; z-index:9999; opacity:0.3; pointer-events:none;');
+document.body.appendChild(flash);
+gsap.to(flash, { opacity: 0, duration: 0.5, onComplete: () => flash.remove() });
+    // 4. WAR MODE LOGIC (IMPERIAL NIGHT)
+    const themeBtn = document.getElementById('themeToggle');
+    const body = document.body;
+    let isWarMode = false;
+
+    themeBtn.addEventListener('click', () => {
+        isWarMode = !isWarMode;
+        
+        if(isWarMode) {
+            // AKTIFKAN WAR MODE
+            document.documentElement.style.setProperty('--navy-base', '#1a0505');
+            body.style.backgroundColor = '#1a0505';
+            
+            gsap.to(".text-yellow-500", { color: "#ff1100", duration: 0.5 });
+            gsap.to(".border-yellow-500, .border-yellow-500\\/10, .border-yellow-500\\/20", { borderColor: "#ff1100", duration: 0.5 });
+            gsap.to(".bg-yellow-500", { backgroundColor: "#ff1100", duration: 0.5 });
+            
+            themeBtn.innerHTML = '<i class="fas fa-fire text-sm"></i><span class="text-[9px]">WAR MODE</span>';
+            initParticles("#ff1100"); // Ubah partikel jadi merah
+        } else {
+            // KEMBALI KE NORMAL
+            document.documentElement.style.setProperty('--navy-base', '#050811');
+            body.style.backgroundColor = '#050811';
+            
+            gsap.to(".text-yellow-500", { color: "#d4af37", duration: 0.5 });
+            gsap.to(".border-yellow-500, .border-yellow-500\\/10, .border-yellow-500\\/20", { borderColor: "rgba(212, 175, 55, 0.2)", duration: 0.5 });
+            gsap.to(".bg-yellow-500", { backgroundColor: "#d4af37", duration: 0.5 });
+            
+            themeBtn.innerHTML = '<i class="fas fa-moon text-sm"></i><span class="text-[9px]">MODE</span>';
+            initParticles("#d4af37"); // Ubah partikel jadi emas lagi
+        }
+    });
+
+    // 5. SWIPER & LAINNYA
+    new Swiper(".galeriSwiper", {
+        slidesPerView: 1, spaceBetween: 30, loop: true,
+        autoplay: { delay: 3000 },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }
+    });
+</script>
+</body>
+</html>
