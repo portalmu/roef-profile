@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Gallery | RoEF Clan</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/spotlight.bundle.js"></script>
+
+    <style>
+        :root {
+            --accent-pink: #ff007a;
+            --accent-purple: #8b5cf6;
+            --accent-blue: #00d4ff;
+            --bg-dark: #050811;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Particles Layer */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Bento Grid Styling */
+        .gallery-card-v3 {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 0, 122, 0.1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            display: block;
+        }
+
+        .gallery-card-v3:hover {
+            border-color: var(--accent-pink);
+            box-shadow: 0 0 40px rgba(255, 0, 122, 0.2);
+            transform: scale(0.98);
+        }
+
+        .bento-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+            filter: saturate(1.3);
+        }
+
+        .gallery-card-v3:hover .bento-img {
+            transform: scale(1.1);
+        }
+
+        .bento-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(5, 8, 17, 0.9) 10%, transparent 70%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .gallery-card-v3:hover .bento-overlay {
+            opacity: 1;
+        }
+
+        /* Stats Box Styling */
+        .stat-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .stat-box:hover {
+            border-color: var(--accent-blue);
+            background: rgba(0, 212, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        /* Vibrant Gradient Text */
+        .vibrant-gradient {
+            background: linear-gradient(to right, var(--accent-pink), var(--accent-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .category-badge {
+            background: linear-gradient(45deg, var(--accent-pink), var(--accent-purple));
+            font-size: 10px;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-weight: 900;
+            width: fit-content;
+            text-transform: uppercase;
+        }
+
+        .bento-title {
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            letter-spacing: -0.05em;
+            margin-top: 8px;
+        }
+
+        /* Lightbox Customization */
+        #spotlight { background-color: rgba(5, 8, 17, 0.98) !important; }
+
+        /* Scrollbar Custom */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--accent-pink); border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="content-wrapper">
+        <nav class="p-8">
+            <a href="index.html" class="text-gray-400 hover:text-white transition flex items-center gap-3 font-bold text-xs tracking-[0.3em] uppercase">
+                <i class="fas fa-chevron-left text-pink-500"></i> Back to Home
+            </a>
+        </nav>
+
+        <header class="py-12 text-center">
+            <h1 class="text-5xl md:text-8xl font-black italic uppercase tracking-tighter mb-4">
+                COMMUNITY <br><span class="vibrant-gradient">ARCHIVES</span>
+            </h1>
+            <p class="text-gray-500 tracking-[0.5em] uppercase text-[10px] font-bold">Captured Moments of RoEF Clan</p>
+
+            <div class="max-w-4xl mx-auto px-6 mt-12 mb-16 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="stat-box">
+                    <div class="text-2xl font-black text-pink-500">300+</div>
+                    <div class="text-[9px] tracking-widest uppercase opacity-60 font-bold">Photos</div>
+                </div>
+                <div class="stat-box">
+                    <div class="text-2xl font-black text-purple-500">15+</div>
+                    <div class="text-[9px] tracking-widest uppercase opacity-60 font-bold">Events</div>
+                </div>
+                <div class="stat-box">
+                    <div class="text-2xl font-black text-blue-500">34</div>
+                    <div class="text-[9px] tracking-widest uppercase opacity-60 font-bold">Members</div>
+                </div>
+                <div class="stat-box">
+                    <div class="text-2xl font-black text-white">2025</div>
+                    <div class="text-[9px] tracking-widest uppercase opacity-60 font-bold">Est. Year</div>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-7xl mx-auto px-6 pb-32">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[180px] md:auto-rows-[240px]">
+        
+        <a class="col-span-2 row-span-2 gallery-card-v3 group spotlight" href="galeri/99survival2.jpg">
+            <img src="galeri/99survival2.jpg" class="bento-img">
+            <div class="bento-overlay">
+                <span class="category-badge">Survival</span>
+                <h3 class="bento-title">99 Survival Series</h3>
+            </div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/99survival3.png"><img src="galeri/99survival3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/99survival4.png"><img src="galeri/99survival4.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/99survival5.png"><img src="galeri/99survival5.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/99survival6.png"><img src="galeri/99survival6.png" class="bento-img"></a>
+
+        <a class="col-span-2 gallery-card-v3 group spotlight" href="galeri/collabxency.png">
+            <img src="galeri/collabxency.png" class="bento-img">
+            <div class="bento-overlay">
+                <span class="category-badge">Collab</span>
+                <h3 class="bento-title">Collab X Ency</h3>
+            </div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/collab1.png"><img src="galeri/collab1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/collab2.png"><img src="galeri/collab2.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/collab3.png"><img src="galeri/collab3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/ekspedisiantartika.jpg"><img src="galeri/ekspedisiantartika.jpg" class="bento-img"></a>
+
+        <a class="row-span-2 gallery-card-v3 group spotlight" href="galeri/boxing.jpg">
+            <img src="galeri/boxing.jpg" class="bento-img">
+            <div class="bento-overlay">
+                <span class="category-badge">Event</span>
+                <h3 class="bento-title">Boxing Day</h3>
+            </div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/fishit1.png"><img src="galeri/fishit1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/fishit2.png"><img src="galeri/fishit2.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/fishit3.png"><img src="galeri/fishit3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/fishit4.png"><img src="galeri/fishit4.png" class="bento-img"></a>
+        
+        <a class="col-span-2 row-span-2 gallery-card-v3 group spotlight" href="galeri/jalanjalan.png">
+            <img src="galeri/jalanjalan.png" class="bento-img">
+            <div class="bento-overlay"><span class="category-badge">Fun</span><h3 class="bento-title">City Tour</h3></div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/h1.jpg"><img src="galeri/h1.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/h2.jpg"><img src="galeri/h2.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/h3.jpg"><img src="galeri/h3.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/h8.png"><img src="galeri/h8.png" class="bento-img"></a>
+
+        <a class="col-span-2 gallery-card-v3 group spotlight" href="galeri/makrabvol23.png">
+            <img src="galeri/makrabvol23.png" class="bento-img">
+            <div class="bento-overlay"><span class="category-badge">Gathering</span><h3 class="bento-title">Makrab Night</h3></div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab1.png"><img src="galeri/makrab1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab2.png"><img src="galeri/makrab2.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab3.png"><img src="galeri/makrab3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab4.png"><img src="galeri/makrab4.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab5.png"><img src="galeri/makrab5.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab6.png"><img src="galeri/makrab6.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrab7.png"><img src="galeri/makrab7.png" class="bento-img"></a>
+        
+        <a class="row-span-2 gallery-card-v3 group spotlight" href="galeri/makrabvol21.png"><img src="galeri/makrabvol21.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrabvol22.png"><img src="galeri/makrabvol22.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrabvol24.png"><img src="galeri/makrabvol24.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/makrabvol25.png"><img src="galeri/makrabvol25.png" class="bento-img"></a>
+
+        <a class="col-span-2 row-span-2 gallery-card-v3 group spotlight" href="galeri/mafia3.png">
+            <img src="galeri/mafia3.png" class="bento-img">
+            <div class="bento-overlay"><span class="category-badge">Foto-Foto</span><h3 class="bento-title">Goodlooking</h3></div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/mafia1.png"><img src="galeri/mafia1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/mafia2.png"><img src="galeri/mafia2.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/mafia4.png"><img src="galeri/mafia4.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/black.png"><img src="galeri/black.png" class="bento-img"></a>
+        
+        <a class="gallery-card-v3 group spotlight" href="galeri/mountbatu.png"><img src="galeri/mountbatu.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/mountswiss.png"><img src="galeri/mountswiss.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/neohe1.png"><img src="galeri/neohe1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/neohe2.png"><img src="galeri/neohe2.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/neohe3.png"><img src="galeri/neohe3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/neohe7.png"><img src="galeri/neohe7.png" class="bento-img"></a>
+
+        <a class="col-span-2 gallery-card-v3 group spotlight" href="galeri/park9.png">
+            <img src="galeri/park9.png" class="bento-img">
+            <div class="bento-overlay"><span class="category-badge">Community</span><h3 class="bento-title">Park Sessions</h3></div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park1.png"><img src="galeri/park1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park2.png"><img src="galeri/park2.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park3.png"><img src="galeri/park3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park4.png"><img src="galeri/park4.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park5.png"><img src="galeri/park5.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park6.png"><img src="galeri/park6.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park7.png"><img src="galeri/park7.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/park8.png"><img src="galeri/park8.png" class="bento-img"></a>
+
+        <a class="gallery-card-v3 group spotlight" href="galeri/pizza.jpg"><img src="galeri/pizza.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/pizzaa.jpg"><img src="galeri/pizzaa.jpg" class="bento-img"></a>
+        <a class="row-span-2 gallery-card-v3 group spotlight" href="galeri/random1.jpg"><img src="galeri/random1.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/random2.jpg"><img src="galeri/random2.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/random3.jpg"><img src="galeri/random3.jpg" class="bento-img"></a>
+        
+        <a class="col-span-2 gallery-card-v3 group spotlight" href="galeri/warga624.png">
+            <img src="galeri/warga624.png" class="bento-img">
+            <div class="bento-overlay"><span class="category-badge">Warga 62</span><h3 class="bento-title">City Life</h3></div>
+        </a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/warga621.png"><img src="galeri/warga621.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/warga622.png"><img src="galeri/warga622.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/warga623.png"><img src="galeri/warga623.png" class="bento-img"></a>
+
+        <a class="gallery-card-v3 group spotlight" href="galeri/salondefiesta.png"><img src="galeri/salondefiesta.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/troll.png"><img src="galeri/troll.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/is1.png"><img src="galeri/is1.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/k1.jpg"><img src="galeri/k1.jpg" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/m3.png"><img src="galeri/m3.png" class="bento-img"></a>
+        <a class="gallery-card-v3 group spotlight" href="galeri/m4.png"><img src="galeri/m4.png" class="bento-img"></a>
+
+    </div>
+</main>
+
+        <footer class="py-20 text-center border-t border-white/5">
+            <p class="text-[10px] text-gray-600 tracking-[0.5em] uppercase italic font-bold">© 2026 RoEF Community Gallery.</p>
+        </footer>
+    </div>
+
+    <script>
+        // CONFIG PARTICLES VIBRANT
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": ["#ff007a", "#8b5cf6", "#00d4ff"] }, // Pink, Purple, Blue
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 2, "random": true },
+                "line_linked": { 
+                    "enable": true, 
+                    "distance": 150, 
+                    "color": "#ff007a", 
+                    "opacity": 0.2, 
+                    "width": 1 
+                },
+                "move": { 
+                    "enable": true, 
+                    "speed": 2, 
+                    "direction": "top", 
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" }
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 0.8 } }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
